@@ -1,0 +1,93 @@
+body {
+  background-color: rgb(44, 44, 44) !important;
+  height: 100vh !important;
+}
+
+.chatbot {
+  color: var(--text-light-gray);
+  margin-left: auto;
+  margin-right: auto;
+
+  max-width: 850px !important;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.chatbot_chat {
+  max-height: 84%;
+  min-height: 10% !important;
+  text-align: center;
+  flex: 1 !important;
+  width: 100%;
+}
+
+.prompt_input {
+  border: 1px solid var(--outline-color);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 7px 10px;
+  border-radius: 7px;
+  width: 100%;
+}
+
+.prompt_input input {
+  background: transparent;
+  border: none;
+  color: var(--text-light-gray);
+  width: 100%;
+}
+
+.prompt_input input:focus {
+  outline: none;
+}
+
+.prompt_input input::placeholder {
+  font-size: 16px;
+}
+
+.prompt_input .send_btn {
+  cursor: pointer;
+}
+
+.prompt_input .send_btn:hover {
+  color: var(--text-white);
+}
+
+.attach_file {
+  background-color: transparent !important;
+}
+
+@media screen and (max-width: 950px) {
+  .chatbot {
+    max-width: 75% !important;
+    height: 90%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .chatbot {
+    max-width: 90% !important;
+  }
+
+  .selectedPropertyContainer {
+    /* position: absolute; */
+    display: block;
+    width: 100%;
+  }
+
+  .selectedPropertyContainer .btn_Container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 7px;
+  }
+
+  .selectedPropertyContainer .btn_Container .btn {
+    font-size: 12px;
+  }
+}
