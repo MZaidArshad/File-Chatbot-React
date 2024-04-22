@@ -95,7 +95,7 @@ const AgentChatbot = () => {
         setThreadId(thread.id);
         console.log("New thread created !!");
       } else if (fileId) {
-        const message = await client.beta.threads.messages.create(threadId, {
+        await client.beta.threads.messages.create(threadId, {
           role: "user",
           content: value || "I have upladed the file",
           attachments: [{ file_id: fileId, tools: [{ type: "file_search" }] }],
@@ -104,7 +104,7 @@ const AgentChatbot = () => {
         console.log("message with file");
         console.log("new msg in old thread");
       } else {
-        const message = await client.beta.threads.messages.create(threadId, {
+        await client.beta.threads.messages.create(threadId, {
           role: "user",
           content: value || "I have upladed the file",
         });
