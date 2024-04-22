@@ -55,6 +55,7 @@ const Chat = ({ conversation }) => {
               </div>
             );
           }
+          return null;
         })}
 
       <div ref={messageEndRef}></div>

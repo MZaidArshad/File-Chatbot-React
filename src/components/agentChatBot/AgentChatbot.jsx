@@ -8,7 +8,7 @@ import OpenAI from "openai";
 import { CircularProgress } from "@mui/material";
 
 const AgentChatbot = () => {
-  const [pageLoading, setPageLoading] = useState(true);
+  const [, setPageLoading] = useState(true);
 
   const [inputValue, setInputValue] = useState("");
 
