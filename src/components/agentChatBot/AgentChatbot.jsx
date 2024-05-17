@@ -51,18 +51,6 @@ const AgentChatbot = () => {
           purpose: "assistants",
         });
 
-        // setConversation((prevConversation) => [
-        //   ...prevConversation,
-        //   {
-        //     message: `file ${fileInput?.path} uploaded. You can ask questions related to file.`,
-        //     sender: "bot",
-        //     time: new Date().toLocaleTimeString([], {
-        //       hour: "2-digit",
-        //       minute: "2-digit",
-        //     }),
-        //   },
-        // ]);
-
         fileId = file.id;
         setFileInput(null);
         console.log("Got File ID : ", fileId);
@@ -72,10 +60,6 @@ const AgentChatbot = () => {
         return;
       }
     }
-    // if (value.trim() === "") {
-    //   setIsLoading(false);
-    //   return;
-    // }
 
     // Send message with or without file attachment
     try {
@@ -281,7 +265,7 @@ const AgentChatbot = () => {
     getStarted()
       .then(() => setPageLoading(false))
       .catch(() => setPageLoading(false));
-  }, []);
+  }, [initializeChat]);
 
   return (
     <>
