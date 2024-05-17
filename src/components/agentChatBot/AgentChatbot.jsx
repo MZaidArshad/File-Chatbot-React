@@ -265,15 +265,15 @@ const AgentChatbot = () => {
     getStarted()
       .then(() => setPageLoading(false))
       .catch(() => setPageLoading(false));
-  }, [initializeChat]);
+  }, []);
 
   return (
     <>
       <div className="container chatbot">
+        a
         <div className="chatbot_chat">
           <Chat conversation={conversation} />
         </div>
-
         <div className="prompt_input">
           <input
             type="text"
